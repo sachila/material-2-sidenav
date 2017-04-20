@@ -27,4 +27,4 @@ let imports = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class sideNav { }
