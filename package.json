@@ -1,7 +1,8 @@
 {
-  "name": "material 2 sidenav",
-  "version": "1.0.1",
+  "name": "material-2-sidenav",
+  "version": "1.0.2",
   "license": "MIT",
+  "author": "sachila ranawaka<sachilaranawaka@gmail.com>",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +11,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "repository":{
+    "type" : "git",
+    "url" : "git+https://github.com/sachila/material-2-sidenav.git"
+  },
+  "private": false,
   "dependencies": {
     "@angular/animations": "^4.0.2",
     "@angular/common": "^4.0.0",
