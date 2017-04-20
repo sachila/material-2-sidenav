@@ -1,0 +1,28 @@
+  
+
+<md-toolbar class="main" class="toolbar">
+  <div>
+  	<span class="title"  >DashBoard</span> 
+ 
+  </div>
+</md-toolbar>
+ 
+<div style=" height: 100%;"  >
+	
+	<!-- (mouseleave)='sideNavClose()' -->
+	<div   (mouseover)="right.open();" fxFlex="4" fxLayout="column"  >
+		
+		<div *ngFor="let item of navArray" class="navImg" fxFlex href="#" [ngClass] = "{'click' : item.clickCls}" 
+		(click)="changeColor(item)">  
+      		<i class="material-icons" fxFlex  fxLayoutAlign="center center" style="color:white" [ngClass] = "{'clickText' : item.clickCls}"  (click)="changeColor(item)">{{item.icon}}</i>	 
+		</div>
+	</div >
+	<md-sidenav-container class="sideNav-container"  (mouseleave)="right.close()" fxFlex="10" fxLayout="column"> 
+	    <md-sidenav class="sideNav" #right mode="side" opened="false"  fxLayout="column"  style="box-shadow: 3px 2px 5px #020a47; ">
+	     	<div  *ngFor="let item of navArray" fxLayout="row" fxLayoutAlign="center center" fxFlex class="sideNavDiv" 
+	     		    [ngClass] = "{'clickNav' : item.clickCls}" (click)="changeColor(item)" >
+	     		<span  fxLayout fxLayoutAlign="center center"  fxFlex style="color:white"  [ngClass] = "{'clickText' : item.clickCls}" >{{item.name}}  </span>
+	     	</div> 
+	    </md-sidenav> 
+	</md-sidenav-container>
+</div>
